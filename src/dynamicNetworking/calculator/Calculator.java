@@ -4,14 +4,12 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import java.util.HashSet;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-public class Calculator extends JFrame implements ActionListener {
+public class Calculator extends JFrame implements DocumentListener {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
-    }
-    
-    public void actionPerformed(ActionEvent e) {
-        
     }
     
     public Calculator() {
@@ -56,5 +54,20 @@ public class Calculator extends JFrame implements ActionListener {
         setVisible(true);
         
         setSize(200, 115);
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
