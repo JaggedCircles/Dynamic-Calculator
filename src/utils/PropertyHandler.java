@@ -13,7 +13,7 @@ public class PropertyHandler {
     private String classRootDir;
     
     public PropertyHandler(String filepath) throws PropertyException, FileNotFoundException, IOException {
-  Properties properties = new Properties();
+        Properties properties = new Properties();
 	properties.load(new FileInputStream(filepath));
 	  
 	host = properties.getProperty("HOST");
@@ -48,4 +48,12 @@ public class PropertyHandler {
     {
 	return classRootDir;
     }
+    
+    /*
+     * String dirString = System.getProperty("user.dir");
+     * String completeString = dirString + File.separator + propertyFileString;
+     * if ((propertyFile = new File(completeString).exists()) {
+     *     return propertyFile;
+     * }
+     */
 }
